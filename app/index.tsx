@@ -1,17 +1,32 @@
-import { StyleSheet, Text, View } from "react-native";
+import {Button, StyleSheet, Text, View} from "react-native";
+import {Link} from "expo-router";
+import React from "react";
 
 export default function Page() {
+
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Customer Management</Text>
-        <Text style={styles.subtitle}>Welcome to the dashboard</Text>
+          <Text style={styles.subtitle}>Welcome to the dashboard</Text>
+
+
+
+        <Link href='/customer'><Button title={"Customer Management"}/></Link>
+
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  button: {
+   backgroundColor: "#007bff",
+    padding: 16,
+    borderRadius: 8,
+    color: "#fff",
+    fontWeight: "bold",
+  },
   container: {
     flex: 1,
     alignItems: "center",
@@ -24,6 +39,8 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   title: {
+    marginTop:-600,
+    marginLeft:-550,
     fontSize: 64,
     fontWeight: "bold",
   },
@@ -32,12 +49,8 @@ const styles = StyleSheet.create({
     marginBottom: 32,
     fontWeight: "500",
     lineHeight: 1.2,
+    fontSize:32,
     letterSpacing: -0.5,
-    fontWeight: "500",
-    lineHeight: 1.2,
-    letterSpacing: -0.5,
-    fontSize: 24,
-    fontSize: 36,
     color: "#38434D",
   },
 });
